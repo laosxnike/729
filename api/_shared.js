@@ -1,4 +1,5 @@
 const Stripe = require("stripe");
+const { Resend } = require("resend");
 
 function json(res, status, payload) {
   res.statusCode = status;
@@ -223,6 +224,31 @@ async function postWebhook(url, payload) {
   return { ok: response.ok, status: response.status };
 }
 
+async function sendEmail(subject, html, toOverride) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const ownerEmail = process.env.OWNER_EMAIL;
+  if (!apiKey || !ownerEmail) return { ok: false, missing: true };
+
+  const resend = new Resend(apiKey);
+  const to = toOverride || ownerEmail;
+  const from = process.env.EMAIL_FROM || "Community 729 <notifications@resend.dev>";
+
+  try {
+    const { error } = await resend.emails.send({ from, to, subject, html });
+    if (error) return { ok: false, error: error.message };
+    return { ok: true };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+}
+
+function fmtPayloadHtml(payload) {
+  return Object.entries(payload)
+    .filter(([k]) => k !== "type")
+    .map(([k, v]) => `<tr><td style="padding:4px 8px;font-weight:600;color:#555;white-space:nowrap">${k}</td><td style="padding:4px 8px">${String(v).replace(/</g, "&lt;")}</td></tr>`)
+    .join("");
+}
+
 function getStripe() {
   if (!process.env.STRIPE_SECRET_KEY) return null;
   return new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -231,10 +257,12 @@ function getStripe() {
 }
 
 module.exports = {
+  fmtPayloadHtml,
   getStripe,
   json,
   loadContent,
   parseJsonBody,
   postWebhook,
-  readMap
+  readMap,
+  sendEmail
 };

@@ -407,16 +407,32 @@ document.getElementById('calFilterBar').addEventListener('click', (e) => {
 document.getElementById('prevWeek')?.addEventListener('click', () => showToast('Previous week loaded'));
 document.getElementById('nextWeek')?.addEventListener('click', () => showToast('Next week loaded'));
 
-renderCalendar();
-renderFeaturedEvents();
+async function initCalendar() {
+  try {
+    const r = await fetch('/api/content');
+    if (r.ok) {
+      const data = await r.json();
+      if (Array.isArray(data.events) && data.events.length > 0) {
+        // Replace global EVENTS with live sheet data
+        EVENTS.length = 0;
+        data.events.forEach(e => EVENTS.push(e));
+      }
+    }
+  } catch (_) {
+    // Graceful degradation — hardcoded EVENTS already in shared.js
+  }
+  renderCalendar();
+  renderFeaturedEvents();
 
-// If URL has a hash (linked event), scroll to it and open
-if (window.location.hash) {
-  const id = window.location.hash.substring(1);
-  if (EVENTS.find(e => e.id === id)) {
-    setTimeout(() => openEventModal(id), 400);
+  if (window.location.hash) {
+    const id = window.location.hash.substring(1);
+    if (EVENTS.find(e => e.id === id)) {
+      setTimeout(() => openEventModal(id), 400);
+    }
   }
 }
+
+initCalendar();
 
 </script>
 </body>

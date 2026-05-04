@@ -565,7 +565,9 @@ document.getElementById('cartOverlay').addEventListener('click', closeCart);
 
 async function handleCheckout() {
   if (cart.length === 0) return;
-  showToast('Opening secure checkout...');
+  const btn = document.querySelector('.checkout-btn');
+  const originalText = btn ? btn.innerHTML : null;
+  if (btn) { btn.disabled = true; btn.innerHTML = 'Opening checkout…'; }
   try {
     const response = await fetch('/api/checkout', {
       method: 'POST',
@@ -575,10 +577,18 @@ async function handleCheckout() {
       })
     });
     const payload = await response.json();
-    if (!response.ok) throw new Error(payload.error || 'Checkout is not connected yet.');
+    if (!response.ok) {
+      const msg = payload.error || 'Checkout is not available right now.';
+      // Surface Stripe-not-configured more clearly
+      const friendly = msg.includes('not connected') || msg.includes('Stripe')
+        ? 'Checkout is being set up — please contact us at +1 407 463 2248 to complete your order.'
+        : msg;
+      throw new Error(friendly);
+    }
     window.location.href = payload.url;
   } catch (error) {
-    showToast(error.message || 'Checkout is not connected yet.');
+    if (btn) { btn.disabled = false; btn.innerHTML = originalText; }
+    showToast(error.message || 'Checkout is not available right now.');
   }
 }
 

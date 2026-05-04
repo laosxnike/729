@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owner Setup · Community 729</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .setup-wrap { max-width: 760px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
+  .setup-badge { display: inline-block; background: #c0975a20; color: #c0975a; border: 1px solid #c0975a40; border-radius: 3px; font-size: 11px; font-family: 'JetBrains Mono', monospace; letter-spacing: .08em; padding: 3px 8px; margin-bottom: 1.4rem; }
+  .setup-section { margin: 2.5rem 0; }
+  .setup-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; margin: 0 0 1rem; }
+  .checklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .7rem; }
+  .checklist li { display: flex; align-items: flex-start; gap: .9rem; padding: .9rem 1rem; border: 1px solid #e0d9cc; border-radius: 4px; background: #faf8f4; }
+  .checklist li.ok { border-color: #3a8a4a30; background: #f0faf2; }
+  .checklist li.missing { border-color: #d4700030; background: #fffaf5; }
+  .check-icon { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px; font-size: 11px; }
+  .check-icon.yes { background: #3a8a4a; color: #fff; }
+  .check-icon.no { background: #e0d9cc; color: #888; }
+  .check-label { flex: 1; }
+  .check-label strong { display: block; font-size: .9rem; font-weight: 600; color: #16140F; margin-bottom: .2rem; }
+  .check-label p { margin: 0 0 .4rem; font-size: .82rem; color: #666; line-height: 1.5; }
+  .env-var { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: .78rem; background: #f0ede6; color: #8b5e2a; padding: 1px 6px; border-radius: 2px; }
+  .setup-section a.btn-vercel { display: inline-flex; align-items: center; gap: .5rem; background: #000; color: #fff; font-size: .82rem; padding: .5rem 1rem; border-radius: 4px; text-decoration: none; font-family: 'Outfit', sans-serif; margin-top: .8rem; }
+  .setup-section a.btn-vercel:hover { background: #333; }
+  .sheet-table { width: 100%; border-collapse: collapse; font-size: .8rem; font-family: 'JetBrains Mono', monospace; margin-top: .6rem; }
+  .sheet-table th { background: #16140F; color: #F2EDE2; padding: 5px 10px; text-align: left; white-space: nowrap; font-weight: 400; }
+  .sheet-table td { padding: 5px 10px; border-bottom: 1px solid #e8e2d8; color: #666; white-space: nowrap; background: #faf8f4; }
+  .setup-note { background: #f5f1ea; border-left: 3px solid #c0975a; padding: .8rem 1rem; font-size: .82rem; color: #555; margin: 1rem 0; line-height: 1.6; border-radius: 0 4px 4px 0; }
+  .refresh-btn { font-family: 'Outfit', sans-serif; font-size: .82rem; background: none; border: 1px solid #c0975a; color: #c0975a; padding: .4rem .9rem; border-radius: 3px; cursor: pointer; margin-bottom: 1rem; }
+  .refresh-btn:hover { background: #c0975a10; }
+  #statusLoading { font-size: .85rem; color: #888; font-family: 'JetBrains Mono', monospace; }
+  .steps-ol { padding-left: 1.3rem; display: flex; flex-direction: column; gap: .5rem; }
+  .steps-ol li { font-size: .88rem; color: #444; line-height: 1.6; }
+  .steps-ol li code { font-family: 'JetBrains Mono', monospace; font-size: .8rem; background: #f0ede6; padding: 1px 5px; border-radius: 2px; color: #8b5e2a; }
+  .tag-new { font-size: .7rem; font-family: 'JetBrains Mono', monospace; background: #3a8a4a20; color: #3a8a4a; border-radius: 2px; padding: 1px 5px; vertical-align: middle; margin-left: 4px; }
+  hr.rule { border: none; border-top: 1px solid #e0d9cc; margin: 2.5rem 0; }
+</style>
+</head>
+<body>
+
+<!-- Top strip -->
+<div class="nav-strip">
+  <div><span class="pulse"></span><span>Open Today · 9am – 9pm · 729 Mills Ave, Orlando</span></div>
+  <div class="strip-r"><span>Family Owned · Mother &amp; Son · Award Winning</span></div>
+</div>
+
+<!-- Main nav -->
+<nav class="main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(50,50)"><g stroke="#16140F" stroke-width="0.7" fill="none" opacity="0.85"><circle cx="0" cy="-22" r="22"/><g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g></g><circle r="16" fill="#F2EDE2"/><circle r="16" fill="none" stroke="#16140F" stroke-width="0.6"/><text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#16140F" letter-spacing="-0.5">729</text></g></svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="practitioners.html">Practitioners</a><a href="calendar.html">Calendar</a><a href="shop.html">Shop</a><a href="rentals.html">Rentals</a><a href="journal.html">Journal</a><a href="about.html">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-head">
+    <a href="index.html" class="nav-brand" onclick="closeMobile()">
+      <svg viewBox="0 0 100 100"><g transform="translate(50,50)"><g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.85"><circle cx="0" cy="-22" r="22"/><g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g></g><circle r="16" fill="#16140F"/><text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text></g></svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="practitioners.html" onclick="closeMobile()">Practitioners</a></li><li><a href="calendar.html" onclick="closeMobile()">Calendar</a></li><li><a href="shop.html" onclick="closeMobile()">Shop</a></li><li><a href="rentals.html" onclick="closeMobile()">Rentals</a></li><li><a href="journal.html" onclick="closeMobile()">Journal</a></li><li><a href="about.html" onclick="closeMobile()">About</a></li>
+  </ul>
+</div>
+
+
+<div class="setup-wrap">
+  <div class="setup-badge">OWNER SETUP · NOT INDEXED</div>
+  <h1 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;margin:0 0 .4rem">Site Configuration</h1>
+  <p style="color:#666;font-size:.9rem;margin:0 0 2rem">This page shows which services are connected. All settings are managed as environment variables in your Vercel project.</p>
+
+  <button class="refresh-btn" onclick="loadStatus()">↻ Refresh status</button>
+  <div id="statusLoading">Loading…</div>
+  <div id="statusContent" style="display:none">
+
+    <!-- Stripe -->
+    <div class="setup-section">
+      <h2>1 · Stripe Checkout</h2>
+      <ul class="checklist" id="stripeChecklist"></ul>
+      <div class="setup-note">
+        <strong>How to connect Stripe:</strong><br>
+        1. Log in to <a href="https://dashboard.stripe.com" target="_blank" rel="noopener">dashboard.stripe.com</a>.<br>
+        2. Go to <strong>Developers → API keys</strong>. Copy your <strong>Secret key</strong> (starts with <code>sk_live_</code> or <code>sk_test_</code>).<br>
+        3. Add it as <span class="env-var">STRIPE_SECRET_KEY</span> in Vercel (see button below).<br>
+        4. For each product/event you sell, go to <strong>Products</strong> in Stripe, create it, and copy the <strong>Price ID</strong> (starts with <code>price_</code>).<br>
+        5. Paste those Price IDs into your Google Sheet's <code>priceId</code> column, or put them in <span class="env-var">PRODUCT_PRICE_MAP</span> as JSON.
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Email -->
+    <div class="setup-section">
+      <h2>2 · Email Notifications <span class="tag-new">recommended</span></h2>
+      <ul class="checklist" id="emailChecklist"></ul>
+      <div class="setup-note">
+        <strong>How to connect email (Resend — free tier):</strong><br>
+        1. Create a free account at <a href="https://resend.com" target="_blank" rel="noopener">resend.com</a>.<br>
+        2. Go to <strong>API Keys</strong> and create a key. Copy it.<br>
+        3. Add it as <span class="env-var">RESEND_API_KEY</span> in Vercel.<br>
+        4. Add your email address as <span class="env-var">OWNER_EMAIL</span> in Vercel.<br>
+        Once set, all form submissions (reservations, contact, rentals, practitioner bookings) will send you an email.
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Google Sheets -->
+    <div class="setup-section">
+      <h2>3 · Google Sheets (Live Data)</h2>
+      <ul class="checklist" id="sheetsChecklist"></ul>
+      <div class="setup-note">
+        <strong>How to connect Google Sheets:</strong><br>
+        1. Create a new Google Sheet with the columns shown below.<br>
+        2. Go to <strong>File → Share → Publish to web</strong>.<br>
+        3. Choose the correct tab, select <strong>Comma-separated values (.csv)</strong>, and click Publish.<br>
+        4. Copy the URL and paste it into Vercel as <span class="env-var">PRODUCTS_CSV_URL</span>, <span class="env-var">EVENTS_CSV_URL</span>, or <span class="env-var">PRACTITIONERS_CSV_URL</span>.<br>
+        5. To show an item, set its <code>status</code> column to <code>active</code>. Leave it blank or set it to <code>draft</code> to hide it.
+      </div>
+
+      <p style="font-size:.85rem;font-weight:600;margin:.8rem 0 .3rem;color:#333">Products sheet columns:</p>
+      <div style="overflow-x:auto">
+        <table class="sheet-table">
+          <tr><th>id</th><th>name</th><th>cat</th><th>catLabel</th><th>price</th><th>priceId</th><th>flag</th><th>glyph</th><th>status</th></tr>
+          <tr><td>s1</td><td>OM Singing Bowl</td><td>bowls</td><td>Tibetan · Hand-Hammered</td><td>65</td><td>price_xxx</td><td>bestseller</td><td>bowl</td><td>active</td></tr>
+        </table>
+      </div>
+
+      <p style="font-size:.85rem;font-weight:600;margin:1.2rem 0 .3rem;color:#333">Events sheet columns:</p>
+      <div style="overflow-x:auto">
+        <table class="sheet-table">
+          <tr><th>id</th><th>day</th><th>date</th><th>num</th><th>title</th><th>titleEm</th><th>time</th><th>host</th><th>price</th><th>priceId</th><th>room</th><th>desc</th><th>badge</th><th>discipline</th><th>status</th></tr>
+          <tr><td>e1</td><td>MON</td><td>JUN 23</td><td>23</td><td>Morning Meditation</td><td></td><td>7:00 AM</td><td>Host Name</td><td>15</td><td>price_xxx</td><td>East Room</td><td>Description…</td><td></td><td>meditation</td><td>active</td></tr>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:#888;margin:.3rem 0 0">Set <code>price</code> to <code>0</code> for free events. Leave <code>priceId</code> blank for free events.</p>
+
+      <p style="font-size:.85rem;font-weight:600;margin:1.2rem 0 .3rem;color:#333">Practitioners sheet columns:</p>
+      <div style="overflow-x:auto">
+        <table class="sheet-table">
+          <tr><th>id</th><th>name</th><th>discipline</th><th>practice</th><th>bio</th><th>price</th><th>priceId</th><th>glyph</th><th>email</th><th>phone</th><th>bookingUrl</th><th>status</th></tr>
+          <tr><td>p1</td><td>Practitioner Name</td><td>meditation</td><td>Practice Title</td><td>Bio text…</td><td>85</td><td>price_xxx</td><td>meditation</td><td>email@x.com</td><td>407-xxx-xxxx</td><td>https://…</td><td>active</td></tr>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:#888;margin:.3rem 0 0">Glyph options: <code>meditation</code> <code>reiki</code> <code>yoga</code> <code>qigong</code> <code>sound</code> <code>breath</code></p>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Webhooks (optional) -->
+    <div class="setup-section">
+      <h2>4 · Webhooks (optional, for Zapier / Make)</h2>
+      <ul class="checklist" id="webhooksChecklist"></ul>
+      <div class="setup-note">
+        If you set up Zapier or Make automations, paste the webhook URL into the corresponding env var below. Webhooks take priority over email notifications when both are set.
+        <ul style="margin:.4rem 0 0 1rem;padding:0;font-size:.82rem">
+          <li><span class="env-var">RESERVATION_WEBHOOK_URL</span> — free event RSVPs</li>
+          <li><span class="env-var">CONTACT_WEBHOOK_URL</span> — contact &amp; rental forms</li>
+          <li><span class="env-var">PRACTITIONER_INTAKE_WEBHOOK_URL</span> — practitioner applications</li>
+          <li><span class="env-var">PRACTITIONER_BOOKING_WEBHOOK_URL</span> — practitioner session requests</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Practitioner intake link -->
+    <div class="setup-section">
+      <h2>5 · Practitioner Intake Link</h2>
+      <p style="font-size:.9rem;color:#444;line-height:1.6">Send this link to any practitioner you want to invite. They fill in their name, bio, discipline, pricing, and photo link. You receive their submission by email (or webhook), then add them to your Practitioners sheet to publish.</p>
+      <div style="display:flex;align-items:center;gap:.7rem;margin-top:.6rem;flex-wrap:wrap">
+        <code id="intakeUrl" style="font-family:'JetBrains Mono',monospace;font-size:.83rem;background:#f0ede6;padding:.5rem .8rem;border-radius:3px;flex:1;min-width:200px"></code>
+        <button onclick="copyIntake()" style="font-family:'Outfit',sans-serif;font-size:.82rem;background:#16140F;color:#F2EDE2;border:none;padding:.5rem 1rem;border-radius:3px;cursor:pointer">Copy link</button>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <!-- Vercel env vars button -->
+    <div class="setup-section">
+      <h2>6 · Add Environment Variables</h2>
+      <p style="font-size:.9rem;color:#444;line-height:1.6">All settings are managed in Vercel. Click the button below to open your project's environment variable settings (you must be logged in to Vercel).</p>
+      <a class="btn-vercel" id="vercelLink" href="https://vercel.com/dashboard" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2L2 19h20L12 2z"/></svg>
+        Open Vercel Environment Settings →
+      </a>
+      <p style="font-size:.8rem;color:#888;margin-top:.7rem">After adding or changing env vars, click <strong>Redeploy</strong> in Vercel for changes to take effect.</p>
+    </div>
+
+  </div><!-- /statusContent -->
+</div><!-- /setup-wrap -->
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-brand">
+        <svg viewBox="0 0 100 100"><g transform="translate(50,50)"><g stroke="#B5894A" stroke-width="0.7" fill="none" opacity="0.85"><circle cx="0" cy="-22" r="22"/><g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g></g><circle r="16" fill="#2A2620"/><circle r="16" fill="none" stroke="#B5894A" stroke-width="0.6"/><text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text></g></svg>
+        <span>Community <em>729</em></span>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Community 729 · Family-Owned · Orlando · FL</span>
+    <span>Owner Setup Page · Not publicly indexed</span>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+function checkItem(label, ok, envVar, hint) {
+  return `<li class="${ok ? 'ok' : 'missing'}">
+    <span class="check-icon ${ok ? 'yes' : 'no'}">${ok ? '✓' : '–'}</span>
+    <span class="check-label">
+      <strong>${label}</strong>
+      ${hint ? `<p>${hint}</p>` : ''}
+      ${envVar ? `<p>Env var: <span class="env-var">${envVar}</span></p>` : ''}
+    </span>
+  </li>`;
+}
+
+async function loadStatus() {
+  document.getElementById('statusLoading').textContent = 'Loading…';
+  document.getElementById('statusContent').style.display = 'none';
+
+  let s;
+  try {
+    const r = await fetch('/api/status');
+    s = await r.json();
+  } catch (e) {
+    document.getElementById('statusLoading').textContent = 'Could not reach /api/status. Are you on the live site?';
+    return;
+  }
+
+  // Stripe
+  document.getElementById('stripeChecklist').innerHTML =
+    checkItem('Stripe secret key', s.stripe, 'STRIPE_SECRET_KEY', s.stripe ? 'Stripe is connected. Checkout is active.' : 'Required to accept payments.') +
+    checkItem('Site URL', !!s.siteUrl, 'SITE_URL', 'Used for Stripe success/cancel redirect URLs.');
+
+  // Email
+  document.getElementById('emailChecklist').innerHTML =
+    checkItem('Resend API key', s.email, 'RESEND_API_KEY', s.email ? 'Email notifications are active.' : 'Required to receive form submissions by email.') +
+    checkItem('Owner email address', s.email, 'OWNER_EMAIL', 'Your email — where form notifications are sent.');
+
+  // Sheets
+  document.getElementById('sheetsChecklist').innerHTML =
+    checkItem('Products CSV', s.productsSheet, 'PRODUCTS_CSV_URL', s.productsSheet ? 'Live product data is loading from your sheet.' : 'Optional. Site uses built-in product list until connected.') +
+    checkItem('Events CSV', s.eventsSheet, 'EVENTS_CSV_URL', s.eventsSheet ? 'Live event data is loading from your sheet.' : 'Optional. Site uses built-in event list until connected.') +
+    checkItem('Practitioners CSV', s.practitionersSheet, 'PRACTITIONERS_CSV_URL', s.practitionersSheet ? 'Live practitioner data is loading from your sheet.' : 'Optional. Site uses built-in practitioner list until connected.');
+
+  // Webhooks
+  document.getElementById('webhooksChecklist').innerHTML =
+    checkItem('Reservation webhook', s.reservationWebhook, 'RESERVATION_WEBHOOK_URL', 'Optional — email fallback is used if not set.') +
+    checkItem('Contact webhook', s.contactWebhook, 'CONTACT_WEBHOOK_URL', 'Optional — email fallback is used if not set.') +
+    checkItem('Practitioner intake webhook', s.intakeWebhook, 'PRACTITIONER_INTAKE_WEBHOOK_URL', 'Optional — email fallback is used if not set.') +
+    checkItem('Practitioner booking webhook', s.bookingWebhook, 'PRACTITIONER_BOOKING_WEBHOOK_URL', 'Optional — email fallback is used if not set.');
+
+  // Intake link
+  const intakeUrl = window.location.origin + '/practitioner-intake';
+  document.getElementById('intakeUrl').textContent = intakeUrl;
+
+  document.getElementById('statusLoading').textContent = '';
+  document.getElementById('statusContent').style.display = 'block';
+}
+
+function copyIntake() {
+  const url = document.getElementById('intakeUrl').textContent;
+  navigator.clipboard.writeText(url).then(() => {
+    showToast('Intake link copied to clipboard');
+  }).catch(() => {
+    showToast('Could not copy — select and copy manually');
+  });
+}
+
+loadStatus();
+</script>
+</body>
+</html>
