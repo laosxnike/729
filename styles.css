@@ -373,8 +373,17 @@
   .hero-card {
     position: absolute;
     inset: 0;
-    background: var(--moss);
+    background: #1a2018;
     overflow: hidden;
+  }
+  .hero-card-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
   }
   .hero-card::before {
     content: '';
