@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal · Community 729</title>
+<meta name="description" content="Journal at The Community Event Center 729 — a sacred space in Orlando offering meditation, yoga, qi gong, reiki, sound baths, and ceremonial goods.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Top strip -->
+<div class="nav-strip">
+  <div><span class="pulse"></span><span>Open Today · 9am – 9pm · 729 Mills Ave, Orlando</span></div>
+  <div class="strip-r"><span>Family Owned · Mother &amp; Son · Award Winning</span></div>
+</div>
+
+<!-- Main nav -->
+<nav class="main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g transform="translate(50,50)">
+          <g stroke="#16140F" stroke-width="0.7" fill="none" opacity="0.85">
+            <circle cx="0" cy="-22" r="22"/>
+            <g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g>
+          </g>
+          <circle r="16" fill="#F2EDE2"/>
+          <circle r="16" fill="none" stroke="#16140F" stroke-width="0.6"/>
+          <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#16140F" letter-spacing="-0.5">729</text>
+        </g>
+      </svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="practitioners.html" class="">Practitioners</a><a href="calendar.html" class="">Calendar</a><a href="shop.html" class="">Shop</a><a href="rentals.html" class="">Rentals</a><a href="journal.html" class="active">Journal</a><a href="about.html" class="">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8h14l-1.5 10a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 8z"/>
+          <path d="M9 8V5a3 3 0 0 1 6 0v3"/>
+        </svg>
+        <span class="cart-count" id="cartCount" style="display:none;">0</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="4" y1="8" x2="20" y2="8"/>
+          <line x1="4" y1="16" x2="20" y2="16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-head">
+    <a href="index.html" class="nav-brand" onclick="closeMobile()">
+      <svg viewBox="0 0 100 100"><g transform="translate(50,50)"><g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.85"><circle cx="0" cy="-22" r="22"/><g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g></g><circle r="16" fill="#16140F"/><text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text></g></svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="practitioners.html" onclick="closeMobile()">Practitioners</a></li><li><a href="calendar.html" onclick="closeMobile()">Calendar</a></li><li><a href="shop.html" onclick="closeMobile()">Shop</a></li><li><a href="rentals.html" onclick="closeMobile()">Rentals</a></li><li><a href="journal.html" onclick="closeMobile()">Journal</a></li><li><a href="about.html" onclick="closeMobile()">About</a></li>
+  </ul>
+  <div class="meta">
+    729 Mills Ave · Orlando · FL<br>
+    +1 407 463 2248
+  </div>
+</div>
+
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label"><span class="num">07</span> The Journal <span></span></div>
+    <h1 class="page-h1">Notes from <em>the room</em>.</h1>
+    <p class="page-lede">Reflections from our family, dispatches from our practitioners, and the occasional essay on what we're reading and why. No SEO chasing, no listicles, no growth hacks. Just writing.</p>
+  </div>
+</div>
+
+<!-- Featured -->
+<section>
+  <article class="journal-feature">
+    <div class="jf-meta">FEATURED · APR 2026 · 8 MIN READ</div>
+    <h2 class="jf-title">On the <em>long</em> silence — what we learn from sittings without speech.</h2>
+    <p class="jf-excerpt">Mira leads our Sunday morning sittings, and once a quarter she holds a four-hour silent vipassana for whoever wants to come. The signup is small. The room fills anyway. After the last one, I asked her why she keeps offering them when so few people register. She said: "The room knows when to fill itself."</p>
+    <a href="#" class="btn brass">Read the essay <span class="arrow">→</span></a>
+  </article>
+</section>
+
+<!-- Filter pills -->
+<section>
+  <div class="practitioner-bar" id="journalFilter">
+    <button class="filter-pill active" data-filter="all">All</button>
+    <button class="filter-pill" data-filter="essays">Essays</button>
+    <button class="filter-pill" data-filter="practice">Practice Notes</button>
+    <button class="filter-pill" data-filter="profiles">Practitioner Profiles</button>
+    <button class="filter-pill" data-filter="reading">What We're Reading</button>
+    <button class="filter-pill" data-filter="news">News</button>
+  </div>
+
+  <div class="journal-grid" id="journalGrid"></div>
+</section>
+
+
+<!-- Newsletter -->
+<div class="newsletter" id="contact">
+  <div class="newsletter-inner">
+    <div>
+      <h2>Letters from <em>the room</em>.</h2>
+      <p>A quiet weekly note — what's on the calendar, what's just arrived in the shop, and the occasional reflection from the practice. No marketing language. No urgency. Unsubscribe in one click.</p>
+    </div>
+    <form class="nl-form" onsubmit="handleNewsletter(event)" autocomplete="off">
+      <input type="email" name="newsletter_email" placeholder="your@email.com" required aria-label="Email address" autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g transform="translate(50,50)">
+            <g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.78">
+              <circle cx="0" cy="-22" r="22"/>
+              <g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g>
+            </g>
+            <circle r="16" fill="#2A2620"/>
+            <circle r="16" fill="none" stroke="#B5894A" stroke-width="0.6"/>
+            <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text>
+          </g>
+        </svg>
+        <span>Community <em>729</em></span>
+      </a>
+      <p style="margin-top: 1rem;">A sacred space in the heart of Orlando. Family-owned. Community-built. Sincerely held.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/communityeventcenter729/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/communitycenter729" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M14 8h2V4h-2a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h2.5l.5-4H14V8z"/></svg>
+        </a>
+        <a href="https://www.meetup.com/knowledgeforspiritualliving-gmail-com/" aria-label="Meetup">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="contact.html">729 Mills Ave</a></li>
+        <li><a href="contact.html">Orlando, FL 32803</a></li>
+        <li><a href="tel:4074632248">+1 407 463 2248</a></li>
+        <li><a href="contact.html">Get Directions →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="calendar.html">This Week</a></li>
+        <li><a href="practitioners.html">Practitioners</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="membership.html">Membership</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html?cat=bowls">Singing Bowls</a></li>
+        <li><a href="shop.html?cat=incense">Incense &amp; Resins</a></li>
+        <li><a href="shop.html?cat=apparel">Apparel</a></li>
+        <li><a href="shop.html?cat=card">Gift Cards</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Community 729 · Family-Owned · Orlando · FL</span>
+    <span>Seven · Two · Nine · Sacred Geometry · Held Quietly</span>
+  </div>
+</footer>
+
+
+<!-- Cart drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your basket <small id="cartHeadCount">— empty</small></h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot" id="cartFoot" style="display:none;">
+    <div class="cart-totals">
+      <div class="total-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="total-row"><span>Shipping</span><span>Calculated next</span></div>
+      <div class="total-row grand"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    </div>
+    <button class="checkout-btn" onclick="handleCheckout()">Proceed to Checkout →</button>
+  </div>
+</aside>
+
+<!-- Modal overlay -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,12 10,18 20,6"/></svg></span>
+  <span id="toastMsg"></span>
+</div>
+
+<script src="shared.js"></script>
+<script>
+
+const JOURNAL_POSTS = [
+  { id: 'j1', cat: 'practice', title: 'How to <em>actually</em> sit · for ten minutes', author: 'Mira Halvorsen', date: 'APR 12, 2026', read: '4 min', excerpt: 'Most beginner meditation guides give the same advice — focus on the breath, return when distracted. Here\'s what they leave out.' },
+  { id: 'j2', cat: 'profiles', title: 'A morning in the courtyard with <em>Takeshi</em>', author: 'Liesel Chen', date: 'APR 5, 2026', read: '6 min', excerpt: 'Our Qi Gong teacher arrived in Orlando in 1998 with two suitcases and a teacher\'s certificate. Twenty-eight years later, he\'s still showing up at 7am.' },
+  { id: 'j3', cat: 'reading', title: 'Spring reading list · <em>2026</em>', author: 'The Family', date: 'MAR 28, 2026', read: '3 min', excerpt: 'Six books currently sitting on the table by the East Room door. Take one if you find it. Bring it back when you\'re ready.' },
+  { id: 'j4', cat: 'essays', title: 'Why our calendar is <em>shorter</em> than yours', author: 'The Family', date: 'MAR 21, 2026', read: '5 min', excerpt: 'Most wellness centers run forty to sixty classes a week. We run forty. The difference is what we say no to.' },
+  { id: 'j5', cat: 'practice', title: 'On <em>tuning</em> a singing bowl by ear', author: 'Noor Khatun', date: 'MAR 14, 2026', read: '7 min', excerpt: 'There\'s a particular kind of attention required to know when a bowl is in tune with itself. It can\'t be measured. It can only be heard.' },
+  { id: 'j6', cat: 'news', title: 'Spring schedule · <em>new</em> classes &amp; one farewell', author: 'The Family', date: 'MAR 7, 2026', read: '2 min', excerpt: 'Three new offerings starting in April, and Benedikt is taking sabbatical until autumn. Updates inside.' },
+  { id: 'j7', cat: 'essays', title: 'On <em>holding</em> space for grief', author: 'Elena Wójcik', date: 'FEB 28, 2026', read: '8 min', excerpt: 'Reiki is often described as energy work. After fifteen years of practice, I\'d describe it differently — as the discipline of staying present with what\'s already there.' },
+  { id: 'j8', cat: 'profiles', title: '<em>Yusuf</em> · forty years of dhikr', author: 'The Family', date: 'FEB 21, 2026', read: '6 min', excerpt: 'A conversation with our Sufi meditation teacher about silence, remembrance, and what it means to keep returning to the same practice for four decades.' },
+  { id: 'j9', cat: 'reading', title: '<em>Three</em> books on the breath', author: 'Liesel Chen', date: 'FEB 14, 2026', read: '4 min', excerpt: 'Our breathwork facilitator on the three books that shaped how she teaches. None of them are what you\'d expect.' },
+];
+
+let journalFilter = 'all';
+
+function renderJournal() {
+  const filtered = journalFilter === 'all' ? JOURNAL_POSTS : JOURNAL_POSTS.filter(p => p.cat === journalFilter);
+  const catLabels = { essays: 'ESSAY', practice: 'PRACTICE NOTE', profiles: 'PROFILE', reading: 'READING', news: 'NEWS' };
+  const grid = document.getElementById('journalGrid');
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="no-results"><em>Nothing in this category yet.</em><br><small>More coming soon. We write at the pace of the practice.</small></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(p => `
+    <article class="journal-card">
+      <a href="#" class="journal-link">
+        <div class="jc-meta">
+          <span class="jc-cat">${catLabels[p.cat]}</span>
+          <span class="jc-date">${p.date}</span>
+        </div>
+        <h3 class="jc-title">${p.title}</h3>
+        <p class="jc-excerpt">${p.excerpt}</p>
+        <div class="jc-foot">
+          <span class="jc-author">${p.author}</span>
+          <span class="jc-read">${p.read} read</span>
+        </div>
+      </a>
+    </article>
+  `).join('');
+}
+
+document.getElementById('journalFilter').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-pill');
+  if (!btn) return;
+  document.querySelectorAll('#journalFilter .filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  journalFilter = btn.dataset.filter;
+  renderJournal();
+});
+
+renderJournal();
+
+</script>
+</body>
+</html>

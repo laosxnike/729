@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community 729 · Sacred Space · Orlando</title>
+<meta name="description" content="The Community Event Center 729 — a sacred space in Orlando. Meditation, yoga, qi gong, reiki, sound baths, and a curated marketplace of bowls, tapestries, and ceremonial goods. Family-owned since 2018.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- ═════════════ TOP STRIP ═════════════ -->
+<div class="nav-strip">
+  <div><span class="pulse"></span><span>Open Today · 9am – 9pm · 729 Mills Ave, Orlando</span></div>
+  <div class="strip-r"><span>Family Owned · Mother & Son · Award Winning</span></div>
+</div>
+
+<!-- ═════════════ NAV ═════════════ -->
+<nav class="main">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g transform="translate(50,50)">
+          <g stroke="#16140F" stroke-width="0.7" fill="none" opacity="0.85">
+            <circle cx="0" cy="-22" r="22"/>
+            <g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g>
+          </g>
+          <circle r="16" fill="#F2EDE2"/>
+          <circle r="16" fill="none" stroke="#16140F" stroke-width="0.6"/>
+          <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#16140F" letter-spacing="-0.5">729</text>
+        </g>
+      </svg>
+      <span>Community <em>729</em></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#offerings">Offerings</a>
+      <a href="practitioners.html">Practitioners</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="shop.html">Shop</a>
+      <a href="rentals.html">Rentals</a>
+      <a href="journal.html">Journal</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8h14l-1.5 10a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 8z"/>
+          <path d="M9 8V5a3 3 0 0 1 6 0v3"/>
+        </svg>
+        <span class="cart-count" id="cartCount" style="display:none;">0</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="4" y1="8" x2="20" y2="8"/>
+          <line x1="4" y1="16" x2="20" y2="16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═════════════ MOBILE DRAWER ═════════════ -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-head">
+    <a href="#top" class="nav-brand" onclick="closeMobile()">
+      <svg viewBox="0 0 100 100"><g transform="translate(50,50)"><g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.85"><circle cx="0" cy="-22" r="22"/><g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g></g><circle r="16" fill="#16140F"/><text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text></g></svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="#offerings" onclick="closeMobile()">Offerings</a></li>
+    <li><a href="practitioners.html" onclick="closeMobile()">Practitioners</a></li>
+    <li><a href="calendar.html" onclick="closeMobile()">Calendar</a></li>
+    <li><a href="shop.html" onclick="closeMobile()">Shop</a></li>
+    <li><a href="rentals.html" onclick="closeMobile()">Rentals</a></li>
+    <li><a href="journal.html" onclick="closeMobile()">Journal</a></li>
+    <li><a href="about.html" onclick="closeMobile()">About</a></li>
+  </ul>
+  <div class="meta">
+    729 Mills Ave · Orlando · FL<br>
+    +1 407 463 2248
+  </div>
+</div>
+
+<!-- ═════════════ HERO ═════════════ -->
+<div class="container" id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-meta">A Sacred Space · Orlando · Est. Family-Owned</div>
+      <h1>A sanctuary<br>in the <em>heart</em><br>of <em>Orlando</em>.</h1>
+      <p class="lede">Meditation, yoga, qi gong, reiki, and sound — held in a sacred space by trusted practitioners. Plus a curated marketplace of singing bowls, ritual instruments, and ceremonial goods. Family-owned. Community-built.</p>
+      <div class="hero-cta">
+        <a href="calendar.html" class="btn">This Week's Calendar <span class="arrow">→</span></a>
+        <a href="practitioners.html" class="btn ghost">Find a Practitioner</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>Practitioners</dt><dd>32 trusted</dd></div>
+        <div><dt>Sessions/Week</dt><dd>40+</dd></div>
+        <div><dt>Years held</dt><dd>Since 2018</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="grain"></div>
+        <div class="hero-card-tag">Community 729</div>
+        <div class="hero-mark">
+          <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(240,240)">
+              <g class="rosette" stroke="#F2EDE2" stroke-width="1" fill="none" opacity="0.78">
+                <g class="petal" style="--delay: 0.100s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g>
+                <g transform="rotate(20)"><g class="petal" style="--delay: 0.053s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(40)"><g class="petal" style="--delay: 0.012s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(60)"><g class="petal" style="--delay: 0.115s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(80)"><g class="petal" style="--delay: 0.095s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(100)"><g class="petal" style="--delay: 0.115s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(120)"><g class="petal" style="--delay: 0.049s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(140)"><g class="petal" style="--delay: 0.086s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(160)"><g class="petal" style="--delay: 0.014s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(180)"><g class="petal" style="--delay: 0.128s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(200)"><g class="petal" style="--delay: 0.102s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(220)"><g class="petal" style="--delay: 0.071s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(240)"><g class="petal" style="--delay: 0.020s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(260)"><g class="petal" style="--delay: 0.103s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(280)"><g class="petal" style="--delay: 0.090s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(300)"><g class="petal" style="--delay: 0.088s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(320)"><g class="petal" style="--delay: 0.105s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+                <g transform="rotate(340)"><g class="petal" style="--delay: 0.044s"><path d="M 0 0 A 110 110 0 0 1 0 -220"/><path d="M 0 0 A 110 110 0 0 0 0 -220"/></g></g>
+              </g>
+              <circle r="62" fill="#4A5340"/>
+              <circle r="62" fill="none" stroke="#F2EDE2" stroke-width="1.1" opacity="0.85"/>
+              <text text-anchor="middle" y="22" font-family="Cormorant Garamond" font-size="68" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-2">729</text>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-card-meta">
+          <span>SEVEN · TWO · NINE</span>
+          <span class="corner">28.5542° N · 81.3653° W</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ MARQUEE ═════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Meditation <span class="dot">◆</span> Kundalini Yoga <span class="dot">◆</span> Qi Gong <span class="dot">◆</span> Reiki <span class="dot">◆</span> Sound Bath <span class="dot">◆</span> Full Moon Ceremony <span class="dot">◆</span> Breathwork <span class="dot">◆</span> Ecstatic Dance <span class="dot">◆</span> Cacao Circle <span class="dot">◆</span></span>
+    <span>Meditation <span class="dot">◆</span> Kundalini Yoga <span class="dot">◆</span> Qi Gong <span class="dot">◆</span> Reiki <span class="dot">◆</span> Sound Bath <span class="dot">◆</span> Full Moon Ceremony <span class="dot">◆</span> Breathwork <span class="dot">◆</span> Ecstatic Dance <span class="dot">◆</span> Cacao Circle <span class="dot">◆</span></span>
+  </div>
+</div>
+
+<!-- ═════════════ OFFERINGS ═════════════ -->
+<div class="container">
+  <section id="offerings">
+    <div class="section-label"><span class="num">01</span> Our Offerings <span></span></div>
+    <h2 class="section-title">Nine practices, <em>one room</em>, many teachers.</h2>
+    <p class="section-intro">We host one-hour sessions, weekend retreats, and full-day immersions across nine core practices. Every facilitator is vetted by our family and the community. Drop in, or build a regular rhythm.</p>
+
+    <div class="offerings">
+      <div class="offering" data-filter="meditation">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="5"/><path d="M12 38 C 12 30, 18 26, 24 26 C 30 26, 36 30, 36 38"/><line x1="8" y1="38" x2="40" y2="38"/></svg>
+        </div>
+        <div>
+          <h3>Meditation</h3>
+          <p>Guided sittings, sound baths, crystal bowls. A reset for the nervous system.</p>
+        </div>
+        <div class="meta"><span>4× Weekly</span><span>From $15</span></div>
+      </div>
+
+      <div class="offering" data-filter="yoga">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="10" r="3"/><line x1="24" y1="13" x2="24" y2="32"/><line x1="24" y1="20" x2="14" y2="14"/><line x1="24" y1="20" x2="34" y2="14"/><line x1="24" y1="32" x2="16" y2="40"/><line x1="24" y1="32" x2="32" y2="40"/></svg>
+        </div>
+        <div>
+          <h3>Yoga</h3>
+          <p>Hatha, kundalini, and yin classes. All levels welcome — beginners always honored.</p>
+        </div>
+        <div class="meta"><span>6× Weekly</span><span>From $15</span></div>
+      </div>
+
+      <div class="offering" data-filter="qigong">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><path d="M24 6 C 14 14, 14 28, 24 36 C 34 28, 34 14, 24 6 Z"/><circle cx="24" cy="14" r="2.5" fill="#B5894A"/><circle cx="24" cy="28" r="2.5"/><line x1="24" y1="36" x2="24" y2="42"/></svg>
+        </div>
+        <div>
+          <h3>Qi Gong</h3>
+          <p>The four-thousand-year-old art of effortless power. Breath, movement, awareness.</p>
+        </div>
+        <div class="meta"><span>2× Weekly</span><span>From $20</span></div>
+      </div>
+
+      <div class="offering" data-filter="reiki">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><circle cx="24" cy="24" r="11" stroke-dasharray="2 2"/><circle cx="24" cy="24" r="16" stroke-dasharray="1 3"/><line x1="24" y1="6" x2="24" y2="9"/><line x1="24" y1="39" x2="24" y2="42"/><line x1="6" y1="24" x2="9" y2="24"/><line x1="39" y1="24" x2="42" y2="24"/></svg>
+        </div>
+        <div>
+          <h3>Reiki</h3>
+          <p>One-on-one energy work with certified Reiki Masters. 60-minute private sessions.</p>
+        </div>
+        <div class="meta"><span>By Booking</span><span>From $85</span></div>
+      </div>
+
+      <div class="offering" data-filter="sound">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><path d="M14 30 Q 24 20, 34 30"/><path d="M16 32 L 32 32 L 30 38 L 18 38 Z"/><line x1="24" y1="22" x2="24" y2="14"/></svg>
+        </div>
+        <div>
+          <h3>Sound Bath</h3>
+          <p>Tibetan bowls, crystal bowls, gongs. Lie down, close your eyes, let the sound do the work.</p>
+        </div>
+        <div class="meta"><span>Weekly</span><span>From $25</span></div>
+      </div>
+
+      <div class="offering" data-filter="ceremony">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14"/><circle cx="24" cy="24" r="3" fill="#B5894A"/><line x1="24" y1="6" x2="24" y2="14"/><line x1="24" y1="34" x2="24" y2="42"/><line x1="6" y1="24" x2="14" y2="24"/><line x1="34" y1="24" x2="42" y2="24"/></svg>
+        </div>
+        <div>
+          <h3>Full Moon Ceremony</h3>
+          <p>Once a month, on the moon. Released intentions, shared cacao, the rhythm of breath.</p>
+        </div>
+        <div class="meta"><span>Monthly</span><span>$25</span></div>
+      </div>
+
+      <div class="offering" data-filter="breath">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><path d="M14 24 Q 24 14, 34 24"/><path d="M14 24 Q 24 34, 34 24"/><circle cx="24" cy="24" r="3" fill="#B5894A"/></svg>
+        </div>
+        <div>
+          <h3>Breathwork</h3>
+          <p>Holotropic and conscious connected breathing. Held by trained facilitators only.</p>
+        </div>
+        <div class="meta"><span>Bi-Weekly</span><span>From $30</span></div>
+      </div>
+
+      <div class="offering" data-filter="retreat">
+        <div class="offering-icon">
+          <svg viewBox="0 0 48 48"><path d="M8 38 L 24 14 L 40 38 Z"/><path d="M16 38 L 24 26 L 32 38 Z" fill="#B5894A" opacity="0.5"/><line x1="8" y1="40" x2="40" y2="40"/></svg>
+        </div>
+        <div>
+          <h3>Retreats</h3>
+          <p>Half-day, full-day, and weekend immersions. Limited capacity. Curated by us.</p>
+        </div>
+        <div class="meta"><span>Monthly</span><span>From $50</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ PRACTITIONER DIRECTORY ═════════════ -->
+<div class="container">
+  <section id="practitioners">
+    <div class="section-label"><span class="num">02</span> The Practitioners <span></span></div>
+    <h2 class="section-title">A vetted directory of <em>healers</em>, teachers, and facilitators.</h2>
+    <p class="section-intro">A few of the trusted practitioners we work with — Reiki Masters, yoga teachers, sound healers, breathwork facilitators, and meditation guides. Each one is interviewed and held accountable to our community standards.</p>
+
+    <div class="practitioners" id="practitionerGrid">
+      <!-- Populated by JS — 3 featured -->
+    </div>
+
+    <div class="section-cta">
+      <a href="practitioners.html" class="btn brass">View all 32 practitioners <span class="arrow">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ CALENDAR ═════════════ -->
+<div class="container">
+  <section id="calendar">
+    <div class="section-label"><span class="num">03</span> This Week <span></span></div>
+    <h2 class="section-title">The <em>rhythm</em> of the week.</h2>
+    <p class="section-intro">A few of the offerings on our calendar this week. Drop-ins are welcome at most classes; retreats and ceremonies require advance registration.</p>
+
+    <div class="event-list" id="eventList">
+      <!-- Populated by JS — 4 upcoming -->
+    </div>
+
+    <div class="section-cta">
+      <a href="calendar.html" class="btn brass">See the full calendar <span class="arrow">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ SHOP ═════════════ -->
+<div class="container">
+  <section id="shop">
+    <div class="section-label"><span class="num">04</span> The Marketplace <span></span></div>
+    <h2 class="section-title">Singing bowls, ritual instruments, <em>ceremonial goods</em>.</h2>
+    <p class="section-intro">A glimpse of what's currently in the marketplace. Each piece is chosen by hand. We work directly with artisans in Nepal, Tibet, Japan, and central Florida — nothing is mass-produced, nothing is sold without us holding it first.</p>
+
+    <!-- Featured collections — clickable category tiles linking to filtered shop -->
+    <div class="collections" aria-label="Shop collections">
+      <a href="shop.html?cat=bowls" class="collection">
+        <div class="coll-glyph"></div>
+        <div class="coll-text">
+          <div class="coll-name">Singing Bowls</div>
+          <div class="coll-meta"><span data-count="bowls"></span> · From $49</div>
+        </div>
+      </a>
+      <a href="shop.html?cat=incense" class="collection">
+        <div class="coll-glyph"></div>
+        <div class="coll-text">
+          <div class="coll-name">Incense &amp; Resins</div>
+          <div class="coll-meta"><span data-count="incense"></span> · From $2</div>
+        </div>
+      </a>
+      <a href="shop.html?cat=apparel" class="collection">
+        <div class="coll-glyph"></div>
+        <div class="coll-text">
+          <div class="coll-name">Apparel</div>
+          <div class="coll-meta"><span data-count="apparel"></span> · From $18</div>
+        </div>
+      </a>
+      <a href="shop.html?cat=tapestry" class="collection">
+        <div class="coll-glyph"></div>
+        <div class="coll-text">
+          <div class="coll-name">Tapestries</div>
+          <div class="coll-meta"><span data-count="tapestry"></span> · From $47</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="products" id="productGrid">
+      <!-- Populated by JS — 6 featured -->
+    </div>
+
+    <div class="section-cta">
+      <a href="shop.html" class="btn brass">Visit the marketplace <span class="arrow">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ RENTALS ═════════════ -->
+<div class="container">
+  <section id="rentals">
+    <div class="section-label"><span class="num">05</span> Rent the Space <span></span></div>
+    <div class="rental">
+      <div class="rental-visual">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(100,100)">
+            <g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.85">
+              <circle cx="0" cy="-55" r="55"/>
+              <g transform="rotate(20)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(40)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(60)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(80)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(100)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(120)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(140)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(160)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(180)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(200)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(220)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(240)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(260)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(280)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(300)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(320)"><circle cx="0" cy="-55" r="55"/></g>
+              <g transform="rotate(340)"><circle cx="0" cy="-55" r="55"/></g>
+            </g>
+            <circle r="32" fill="#4A5340"/>
+            <circle r="32" fill="none" stroke="#F2EDE2" stroke-width="0.8" opacity="0.85"/>
+            <text text-anchor="middle" y="11" font-family="Cormorant Garamond" font-size="34" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-1">729</text>
+          </g>
+        </svg>
+        <div class="meta">
+          <span>EAST · WEST · COURTYARD</span>
+          <span>2,400 SQ FT</span>
+        </div>
+      </div>
+      <div>
+        <h2 class="section-title">A space for <em>your</em> sacred work.</h2>
+        <p style="font-size: 1.05rem; max-width: 50ch;">Indoor and outdoor spaces available for classes, gatherings, ceremonies, workshops, and small retreats. Three rooms, four ways to rent — from $45 an hour for the East Room to $650 for a full-day weekend buyout. Our calendar is curated; like-minded programs are welcome.</p>
+        <ul class="rental-features" style="margin-top: 2rem;">
+          <li>
+            <span class="ico">◆</span>
+            <div><strong>East Room</strong><span>Yoga, meditation, breathwork — capacity 24</span></div>
+            <span class="price">$45/HR</span>
+          </li>
+          <li>
+            <span class="ico">◆</span>
+            <div><strong>West Room</strong><span>Workshops, talks, gatherings — capacity 30</span></div>
+            <span class="price">$55/HR</span>
+          </li>
+          <li>
+            <span class="ico">◆</span>
+            <div><strong>Courtyard</strong><span>Outdoor ceremonies, dance — capacity 40</span></div>
+            <span class="price">$65/HR</span>
+          </li>
+        </ul>
+        <div style="margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="rentals.html" class="btn brass">Explore the spaces <span class="arrow">→</span></a>
+          <a href="rentals.html#inquiry-form" class="btn ghost">Inquire About Rentals</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ ABOUT / FAMILY STORY ═════════════ -->
+<div class="container">
+  <section id="about">
+    <div class="section-label"><span class="num">06</span> Our Story <span></span></div>
+    <div class="story">
+      <div>
+        <div class="story-pull">"Family-owned. Mother and son. Award-winning, but quiet about it. Open to every path, sincere about each one."</div>
+        <p style="font-size: 1.05rem; margin-bottom: 1rem;">Community 729 was founded as a sanctuary in the heart of Orlando — a sacred space designed to support local artisans, honor both ancient and modern traditions, and foster real community among people walking their own spiritual paths.</p>
+        <p style="font-size: 1.05rem;">Our vision is to cultivate an awakened world that transforms suffering into compassion and delusion into wisdom. The mission is simpler: hold the room.</p>
+
+        <dl class="story-cred">
+          <div><dt>Founded</dt><dd>Orlando, 2018</dd></div>
+          <div><dt>Family</dt><dd>Mother &amp; Son</dd></div>
+          <div><dt>Recognition</dt><dd>Award-winning</dd></div>
+          <div><dt>Members</dt><dd>1,400+</dd></div>
+        </dl>
+
+        <div style="margin-top: 2rem;">
+          <a href="about.html" class="btn brass">Read our full story <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="story-photo">
+        <img src="img/family.jpg" alt="The mother and son who founded Community 729, photographed warmly in front of an angel-wing mural" loading="lazy">
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════ NEWSLETTER ═════════════ -->
+<div class="newsletter" id="contact">
+  <div class="newsletter-inner">
+    <div>
+      <h2>Letters from <em>the room</em>.</h2>
+      <p>A quiet weekly note — what's on the calendar, what's just arrived in the shop, and the occasional reflection from the practice. No marketing language. No urgency. Unsubscribe in one click.</p>
+    </div>
+    <form class="nl-form" onsubmit="handleNewsletter(event)" autocomplete="off" data-form-type="newsletter">
+      <input type="email" name="newsletter_email" placeholder="your@email.com" required aria-label="Email address" autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- ═════════════ FOOTER ═════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="nav-brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g transform="translate(50,50)">
+            <g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.78">
+              <circle cx="0" cy="-22" r="22"/>
+              <g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g>
+            </g>
+            <circle r="16" fill="#2A2620"/>
+            <circle r="16" fill="none" stroke="#B5894A" stroke-width="0.6"/>
+            <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text>
+          </g>
+        </svg>
+        <span>Community <em>729</em></span>
+      </a>
+      <p style="margin-top: 1rem;">A sacred space in the heart of Orlando. Family-owned. Community-built. Sincerely held.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/communityeventcenter729/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/communitycenter729" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M14 8h2V4h-2a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h2.5l.5-4H14V8z"/></svg>
+        </a>
+        <a href="https://www.meetup.com/knowledgeforspiritualliving-gmail-com/" aria-label="Meetup">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#">729 Mills Ave</a></li>
+        <li><a href="#">Orlando, FL 32803</a></li>
+        <li><a href="tel:4074632248">+1 407 463 2248</a></li>
+        <li><a href="#">Get Directions →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="calendar.html">This Week</a></li>
+        <li><a href="practitioners.html">Practitioners</a></li>
+        <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#">Membership</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">Singing Bowls</a></li>
+        <li><a href="shop.html">Ritual Tools</a></li>
+        <li><a href="shop.html">Gift Cards</a></li>
+        <li><a href="#">Shipping &amp; Returns</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Community 729 · Family-Owned · Orlando · FL</span>
+    <span>Seven · Two · Nine · Sacred Geometry · Held Quietly</span>
+  </div>
+</footer>
+
+<!-- ═════════════ CART DRAWER ═════════════ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your basket <small id="cartHeadCount">— empty</small></h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <!-- Populated by JS -->
+  </div>
+  <div class="cart-foot" id="cartFoot" style="display:none;">
+    <div class="cart-totals">
+      <div class="total-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="total-row"><span>Shipping</span><span>Calculated next</span></div>
+      <div class="total-row grand"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    </div>
+    <button class="checkout-btn" onclick="handleCheckout()">Proceed to Checkout →</button>
+  </div>
+</aside>
+
+<!-- ═════════════ MODAL (Practitioner / Event) ═════════════ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div id="modalContent">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════ TOAST ═════════════ -->
+<div class="toast" id="toast">
+  <span class="check"><svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg></span>
+  <span id="toastMsg"></span>
+</div>
+<script src="shared.js"></script>
+<script>
+// ─────── HOMEPAGE — PREVIEW LOGIC ───────
+// The homepage is a hub: 3 featured practitioners, 4 upcoming events,
+// 6 featured products. Each section links to its dedicated page for the
+// full directory / calendar / shop.
+
+// Render 3 featured practitioners — links go to dedicated detail page
+function renderPractitioners() {
+  const grid = document.getElementById('practitionerGrid');
+  if (!grid) return;
+  // Pick a curated mix of disciplines for variety on the homepage
+  const featuredIds = ['p1', 'p2', 'p4']; // meditation, reiki, yoga
+  const featured = featuredIds.map(id => PRACTITIONERS.find(p => p.id === id)).filter(Boolean);
+
+  grid.innerHTML = featured.map(p => `
+    <article class="practitioner" data-id="${p.id}">
+      <a href="practitioner.html?id=${p.id}" class="pract-link">
+        <div class="pract-portrait">
+          <div class="frame"></div>
+          <div class="tag">${p.practice}</div>
+          <div class="verified" title="Vetted by Community 729">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,12 10,18 20,6"/></svg>
+          </div>
+          <div class="glyph">${glyph(p.glyph, '#B5894A')}</div>
+        </div>
+        <div class="pract-info">
+          <div>
+            <div class="pract-discipline">${p.discipline.toUpperCase()}</div>
+            <h3 class="pract-name">${p.name}</h3>
+          </div>
+          <p class="pract-bio">${p.bio}</p>
+          <div class="pract-foot">
+            <div class="pract-price">$${p.price}<small>/HR</small></div>
+            <span class="book-btn">View &amp; Book →</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  `).join('');
+}
+
+// Render 4 upcoming events — drop into modal on click
+function renderEvents() {
+  const list = document.getElementById('eventList');
+  if (!list) return;
+  const featured = EVENTS.slice(0, 4);
+  const badgeMap = {
+    featured: '<span class="badge featured">FEATURED</span>',
+    new: '<span class="badge new">NEW</span>',
+    full: '<span class="badge full">SOLD OUT</span>',
+  };
+  list.innerHTML = featured.map(e => `
+    <article class="event">
+      <div class="event-date">
+        <div class="day">${e.day}</div>
+        <div class="num">${e.num}</div>
+        <div class="month">${e.date.split(' ')[0]}</div>
+      </div>
+      <div class="event-info">
+        <h4>${e.title}<em>${e.titleEm}</em>${e.badge ? badgeMap[e.badge] : ''}</h4>
+        <div class="time-host">${e.time} · ${e.host} · ${e.room}<span class="price">${e.price === 0 ? 'FREE' : '$' + e.price}</span></div>
+        <p>${e.desc}</p>
+      </div>
+      <div class="event-action">
+        <button class="btn ${e.badge === 'full' ? 'ghost' : ''}" onclick="openEventModal('${e.id}')">${e.badge === 'full' ? 'Waitlist' : (e.price === 0 ? 'Drop In' : 'Reserve')} <span class="arrow">→</span></button>
+      </div>
+    </article>
+  `).join('');
+}
+
+// Render 6 featured products — picks bestsellers and new arrivals
+function renderProducts() {
+  const grid = document.getElementById('productGrid');
+  if (!grid) return;
+  // Pick a curated set: prioritize bestsellers, then new arrivals
+  const flagOrder = { bestseller: 0, new: 1, sale: 2, '': 3, sold: 4 };
+  const featured = PRODUCTS
+    .filter(p => p.flag !== 'sold')
+    .sort((a, b) => (flagOrder[a.flag] ?? 3) - (flagOrder[b.flag] ?? 3))
+    .slice(0, 6);
+
+  const flagMap = {
+    bestseller: '<div class="product-flag bestseller">BESTSELLER</div>',
+    new: '<div class="product-flag new">NEW</div>',
+    sale: '<div class="product-flag sale">SALE</div>',
+  };
+
+  grid.innerHTML = featured.map(p => {
+    const flag = p.flag ? (flagMap[p.flag] || '') : '';
+    const inCart = cart.find(c => c.id === p.id);
+    return `
+    <article class="product" data-id="${p.id}">
+      <a href="product.html?id=${p.id}" class="product-img-link">
+        <div class="product-img">
+          ${flag}
+          ${glyph(p.glyph)}
+        </div>
+      </a>
+      <div class="product-info">
+        <div class="product-cat">${p.catLabel}</div>
+        <h4 class="product-name"><a href="product.html?id=${p.id}">${p.name}</a></h4>
+        <div class="product-foot">
+          <div class="product-price">$${p.price.toFixed(2)}</div>
+          <button class="add-btn ${inCart ? 'added' : ''}" onclick="addToCart('${p.id}')">
+            ${inCart ? '✓ In Cart' : 'Add +'}
+          </button>
+        </div>
+      </div>
+    </article>
+  `;}).join('');
+}
+
+// Populate the category count badges in the collection tiles
+function populateCategoryCounts() {
+  const counts = {};
+  PRODUCTS.forEach(p => { counts[p.cat] = (counts[p.cat] || 0) + 1; });
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const cat = el.dataset.count;
+    el.textContent = counts[cat] != null ? counts[cat] + ' items' : '';
+  });
+}
+
+// Populate the collection tile glyphs
+function populateCollectionGlyphs() {
+  const glyphMap = { bowls: 'bowl', incense: 'incense', apparel: 'tee', tapestry: 'tapestry' };
+  document.querySelectorAll('.collection').forEach(tile => {
+    // For homepage, .collection is now an <a> with href like "shop.html?cat=bowls"
+    // Pull cat from the href
+    const href = tile.getAttribute('href') || '';
+    const m = href.match(/cat=([a-z]+)/);
+    const cat = m ? m[1] : null;
+    const g = tile.querySelector('.coll-glyph');
+    if (g && cat && glyphMap[cat]) g.innerHTML = glyph(glyphMap[cat]);
+  });
+}
+
+// ─────── INIT ───────
+populateCategoryCounts();
+populateCollectionGlyphs();
+renderPractitioners();
+renderEvents();
+renderProducts();
+</script>
+
+</body>
+</html>

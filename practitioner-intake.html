@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner Intake · Community 729</title>
+<meta name="description" content="Practitioner intake form for Community 729.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="nav-strip">
+  <div><span class="pulse"></span><span>Practitioner Intake · Community 729</span></div>
+  <div class="strip-r"><span>729 Mills Ave, Orlando</span></div>
+</div>
+
+<nav class="main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g transform="translate(50,50)">
+          <circle r="16" fill="#F2EDE2"/>
+          <circle r="16" fill="none" stroke="#16140F" stroke-width="0.6"/>
+          <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#16140F">729</text>
+        </g>
+      </svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="practitioners.html">Practitioners</a><a href="calendar.html">Calendar</a><a href="shop.html">Shop</a><a href="rentals.html">Rentals</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="4" y1="8" x2="20" y2="8"/>
+          <line x1="4" y1="16" x2="20" y2="16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-head">
+    <a href="index.html" class="nav-brand" onclick="closeMobile()"><span>Community <em>729</em></span></a>
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="practitioners.html" onclick="closeMobile()">Practitioners</a></li>
+    <li><a href="calendar.html" onclick="closeMobile()">Calendar</a></li>
+    <li><a href="shop.html" onclick="closeMobile()">Shop</a></li>
+    <li><a href="rentals.html" onclick="closeMobile()">Rentals</a></li>
+    <li><a href="contact.html" onclick="closeMobile()">Contact</a></li>
+  </ul>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label"><span class="num">↓</span> Practitioner Intake <span></span></div>
+    <h1 class="page-h1">Tell us what to list.</h1>
+    <p class="page-lede">This form sends your profile details to the Community 729 owner for review. Approved profiles are published from the practitioner sheet.</p>
+  </div>
+</div>
+
+<section>
+  <div class="contact-grid">
+    <div>
+      <h2 class="section-title" style="font-size: 2rem; max-width: none;">Profile details.</h2>
+      <p style="margin-bottom: 2rem;">Use the same name, bio, and rate you want guests to see. The owner can edit before publishing.</p>
+      <dl class="contact-meta">
+        <div>
+          <dt>Required</dt>
+          <dd>Name, email, discipline, practice title, bio, and rate.</dd>
+        </div>
+        <div>
+          <dt>Optional</dt>
+          <dd>Phone, booking link, Stripe price ID, and notes.</dd>
+        </div>
+        <div>
+          <dt>Publishing</dt>
+          <dd>Submissions stay as drafts until the owner marks them active.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <form class="contact-form" onsubmit="handlePractitionerIntake(event)" autocomplete="off">
+      <div class="form-row">
+        <label>
+          <span>Full name</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+      </div>
+      <div class="form-row">
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label>
+          <span>Discipline</span>
+          <select name="discipline" required>
+            <option value="">Select one</option>
+            <option value="meditation">Meditation</option>
+            <option value="reiki">Reiki</option>
+            <option value="yoga">Yoga</option>
+            <option value="breath">Breathwork</option>
+            <option value="sound">Sound Healing</option>
+            <option value="qigong">Qi Gong</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        <span>Practice title</span>
+        <input type="text" name="practice" required placeholder="Example: Reiki Master, Usui Lineage">
+      </label>
+      <label>
+        <span>Short bio</span>
+        <textarea name="bio" rows="5" required placeholder="Write in third person, 2 to 4 sentences."></textarea>
+      </label>
+      <div class="form-row">
+        <label>
+          <span>Session rate</span>
+          <input type="number" name="price" min="0" step="1" required placeholder="95">
+        </label>
+        <label>
+          <span>Stripe price ID</span>
+          <input type="text" name="priceId" placeholder="price_...">
+        </label>
+      </div>
+      <label>
+        <span>Booking link</span>
+        <input type="url" name="bookingUrl" placeholder="https://...">
+      </label>
+      <label>
+        <span>Notes for owner</span>
+        <textarea name="notes" rows="4" placeholder="Availability, room preference, or anything else the owner should know."></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="btn brass">Submit Profile <span class="arrow">→</span></button>
+        <span class="form-hint">This does not publish immediately.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="toast" id="toast">
+  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,12 10,18 20,6"/></svg></span>
+  <span id="toastMsg"></span>
+</div>
+
+<script src="shared.js"></script>
+<script>
+async function handlePractitionerIntake(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  try {
+    const response = await fetch('/api/practitioner-intake', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const payload = await response.json();
+
+    if (!response.ok) throw new Error(payload.error || 'Profile could not be submitted.');
+    showToast('Profile submitted for review');
+    form.reset();
+  } catch (error) {
+    showToast(error.message || 'Profile could not be submitted.');
+  }
+}
+</script>
+</body>
+</html>

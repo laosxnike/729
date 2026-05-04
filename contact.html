@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visit &amp; Contact · Community 729</title>
+<meta name="description" content="Visit &amp; Contact at The Community Event Center 729 — a sacred space in Orlando offering meditation, yoga, qi gong, reiki, sound baths, and ceremonial goods.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Top strip -->
+<div class="nav-strip">
+  <div><span class="pulse"></span><span>Open Today · 9am – 9pm · 729 Mills Ave, Orlando</span></div>
+  <div class="strip-r"><span>Family Owned · Mother &amp; Son · Award Winning</span></div>
+</div>
+
+<!-- Main nav -->
+<nav class="main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g transform="translate(50,50)">
+          <g stroke="#16140F" stroke-width="0.7" fill="none" opacity="0.85">
+            <circle cx="0" cy="-22" r="22"/>
+            <g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g>
+            <g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g>
+          </g>
+          <circle r="16" fill="#F2EDE2"/>
+          <circle r="16" fill="none" stroke="#16140F" stroke-width="0.6"/>
+          <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#16140F" letter-spacing="-0.5">729</text>
+        </g>
+      </svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="practitioners.html" class="">Practitioners</a><a href="calendar.html" class="">Calendar</a><a href="shop.html" class="">Shop</a><a href="rentals.html" class="">Rentals</a><a href="journal.html" class="">Journal</a><a href="about.html" class="">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8h14l-1.5 10a2 2 0 0 1-2 1.7H8.5a2 2 0 0 1-2-1.7L5 8z"/>
+          <path d="M9 8V5a3 3 0 0 1 6 0v3"/>
+        </svg>
+        <span class="cart-count" id="cartCount" style="display:none;">0</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="4" y1="8" x2="20" y2="8"/>
+          <line x1="4" y1="16" x2="20" y2="16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-head">
+    <a href="index.html" class="nav-brand" onclick="closeMobile()">
+      <svg viewBox="0 0 100 100"><g transform="translate(50,50)"><g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.85"><circle cx="0" cy="-22" r="22"/><g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g><g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g></g><circle r="16" fill="#16140F"/><text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text></g></svg>
+      <span>Community <em>729</em></span>
+    </a>
+    <button class="close-btn" onclick="closeMobile()" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="practitioners.html" onclick="closeMobile()">Practitioners</a></li><li><a href="calendar.html" onclick="closeMobile()">Calendar</a></li><li><a href="shop.html" onclick="closeMobile()">Shop</a></li><li><a href="rentals.html" onclick="closeMobile()">Rentals</a></li><li><a href="journal.html" onclick="closeMobile()">Journal</a></li><li><a href="about.html" onclick="closeMobile()">About</a></li>
+  </ul>
+  <div class="meta">
+    729 Mills Ave · Orlando · FL<br>
+    +1 407 463 2248
+  </div>
+</div>
+
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label"><span class="num">↓</span> Contact &amp; Visit <span></span></div>
+    <h1 class="page-h1">Come find <em>the room</em>.</h1>
+    <p class="page-lede">We're at 729 Mills Ave, in the Mills 50 district. Off-street parking is available. The space is single-story and step-free.</p>
+  </div>
+</div>
+
+<!-- Visit info + form -->
+<section>
+  <div class="contact-grid">
+    <!-- Map and address card -->
+    <div class="contact-info">
+      <div class="map-placeholder">
+        <div class="map-grid"></div>
+        <div class="map-pin">
+          <div class="map-pin-inner"></div>
+        </div>
+        <div class="map-label">729 MILLS AVE · ORLANDO</div>
+      </div>
+      <dl class="contact-meta">
+        <div>
+          <dt>Address</dt>
+          <dd>729 N Mills Ave<br>Orlando, FL 32803</dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd><a href="tel:4074632248">+1 407 463 2248</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:hello@community729.com">hello@community729.com</a></dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd>Tuesday — Sunday<br>9am to 9pm<br>Closed Mondays</dd>
+        </div>
+        <div>
+          <dt>Parking</dt>
+          <dd>Off-street lot · 12 spaces<br>Free street parking after 6pm</dd>
+        </div>
+        <div>
+          <dt>Accessibility</dt>
+          <dd>Single-story · Step-free entrance<br>ADA-accessible bathrooms</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Contact form -->
+    <div>
+      <h2 class="section-title" style="font-size: 2rem; max-width: none;">Write to <em>us</em>.</h2>
+      <p style="margin-bottom: 2rem;">For practitioner bookings, please use the <a href="practitioners.html" style="color: var(--brass); text-decoration: underline;">directory</a>. For rentals, use the <a href="rentals.html" style="color: var(--brass); text-decoration: underline;">rentals form</a>. For everything else — questions, suggestions, hellos — write here.</p>
+
+      <form class="contact-form" onsubmit="handleContact(event)" autocomplete="off">
+        <div class="form-row">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+        </div>
+        <label>
+          <span>Subject</span>
+          <select name="subject" required>
+            <option value="">What's this about?</option>
+            <option>General question</option>
+            <option>Class &amp; calendar question</option>
+            <option>Membership inquiry</option>
+            <option>Press &amp; media</option>
+            <option>I'd like to teach here</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="6" required placeholder="Tell us what's on your mind."></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn brass">Send Message <span class="arrow">→</span></button>
+          <span class="form-hint">We respond within 24 hours.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-label"><span class="num">↓</span> Frequently Asked <span></span></div>
+  <h2 class="section-title">Things people often <em>wonder</em>.</h2>
+
+  <div class="faq-list">
+    <details class="faq">
+      <summary>Do I need to be experienced to come to a class?</summary>
+      <p>No. Every class on our calendar welcomes complete beginners. If you're new to a practice, just arrive a few minutes early and tell the teacher — they'll make sure you have what you need.</p>
+    </details>
+    <details class="faq">
+      <summary>Do I need to register, or can I drop in?</summary>
+      <p>Most weekly classes welcome drop-ins — just arrive 10 minutes early. Retreats, ceremonies, and full moon gatherings require advance registration since space is limited.</p>
+    </details>
+    <details class="faq">
+      <summary>What should I bring?</summary>
+      <p>Yourself. We have mats, blankets, bolsters, and cushions for all classes. If you have your own, bring it. Wear something you can move and rest in.</p>
+    </details>
+    <details class="faq">
+      <summary>Do you offer sliding-scale or scholarship pricing?</summary>
+      <p>Yes. Most of our practitioners offer sliding-scale rates for private sessions. We also have a small scholarship fund for our retreats and longer programs. Just ask — quietly, no judgment.</p>
+    </details>
+    <details class="faq">
+      <summary>Can I bring my child?</summary>
+      <p>For most adult classes, no — we keep our adult sessions adult-only so the room can hold the energy it needs to. We do host occasional family meditation and yoga days, listed on the calendar.</p>
+    </details>
+    <details class="faq">
+      <summary>Is the space LGBTQ+ welcoming?</summary>
+      <p>Yes. Without qualification. Every practitioner here is committed to creating space that welcomes every body and every identity.</p>
+    </details>
+    <details class="faq">
+      <summary>How do I become a practitioner here?</summary>
+      <p>We don't have an open application — but we're always meeting new teachers. Come to a class first, attend a few sessions, get to know the room. Then write to us. We work slowly and we like to know who someone is before they teach.</p>
+    </details>
+    <details class="faq">
+      <summary>Do you sell gift cards?</summary>
+      <p>Yes. Digital gift cards in any amount, delivered by email, never expire. Find them in the <a href="shop.html?cat=card" style="color: var(--brass); text-decoration: underline;">shop</a>.</p>
+    </details>
+  </div>
+</section>
+
+
+<!-- Newsletter -->
+<div class="newsletter" id="contact">
+  <div class="newsletter-inner">
+    <div>
+      <h2>Letters from <em>the room</em>.</h2>
+      <p>A quiet weekly note — what's on the calendar, what's just arrived in the shop, and the occasional reflection from the practice. No marketing language. No urgency. Unsubscribe in one click.</p>
+    </div>
+    <form class="nl-form" onsubmit="handleNewsletter(event)" autocomplete="off">
+      <input type="email" name="newsletter_email" placeholder="your@email.com" required aria-label="Email address" autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g transform="translate(50,50)">
+            <g stroke="#F2EDE2" stroke-width="0.7" fill="none" opacity="0.78">
+              <circle cx="0" cy="-22" r="22"/>
+              <g transform="rotate(20)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(40)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(60)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(80)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(100)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(120)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(140)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(160)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(180)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(200)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(220)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(240)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(260)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(280)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(300)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(320)"><circle cx="0" cy="-22" r="22"/></g>
+              <g transform="rotate(340)"><circle cx="0" cy="-22" r="22"/></g>
+            </g>
+            <circle r="16" fill="#2A2620"/>
+            <circle r="16" fill="none" stroke="#B5894A" stroke-width="0.6"/>
+            <text text-anchor="middle" y="6" font-family="Cormorant Garamond" font-size="16" font-weight="500" font-style="italic" fill="#F2EDE2" letter-spacing="-0.5">729</text>
+          </g>
+        </svg>
+        <span>Community <em>729</em></span>
+      </a>
+      <p style="margin-top: 1rem;">A sacred space in the heart of Orlando. Family-owned. Community-built. Sincerely held.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/communityeventcenter729/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.facebook.com/communitycenter729" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M14 8h2V4h-2a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h2.5l.5-4H14V8z"/></svg>
+        </a>
+        <a href="https://www.meetup.com/knowledgeforspiritualliving-gmail-com/" aria-label="Meetup">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="contact.html">729 Mills Ave</a></li>
+        <li><a href="contact.html">Orlando, FL 32803</a></li>
+        <li><a href="tel:4074632248">+1 407 463 2248</a></li>
+        <li><a href="contact.html">Get Directions →</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="calendar.html">This Week</a></li>
+        <li><a href="practitioners.html">Practitioners</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="membership.html">Membership</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html?cat=bowls">Singing Bowls</a></li>
+        <li><a href="shop.html?cat=incense">Incense &amp; Resins</a></li>
+        <li><a href="shop.html?cat=apparel">Apparel</a></li>
+        <li><a href="shop.html?cat=card">Gift Cards</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Community 729 · Family-Owned · Orlando · FL</span>
+    <span>Seven · Two · Nine · Sacred Geometry · Held Quietly</span>
+  </div>
+</footer>
+
+
+<!-- Cart drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your basket <small id="cartHeadCount">— empty</small></h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot" id="cartFoot" style="display:none;">
+    <div class="cart-totals">
+      <div class="total-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="total-row"><span>Shipping</span><span>Calculated next</span></div>
+      <div class="total-row grand"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    </div>
+    <button class="checkout-btn" onclick="handleCheckout()">Proceed to Checkout →</button>
+  </div>
+</aside>
+
+<!-- Modal overlay -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,12 10,18 20,6"/></svg></span>
+  <span id="toastMsg"></span>
+</div>
+
+<script src="shared.js"></script>
+<script>
+
+async function handleContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  try {
+    const response = await fetch('/api/inquiries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'contact', ...data })
+    });
+    const payload = await response.json();
+
+    if (!response.ok) throw new Error(payload.error || 'Message could not be sent.');
+    showToast('Message sent · we\'ll write within 24 hours');
+    form.reset();
+  } catch (error) {
+    showToast(error.message || 'Message could not be sent.');
+  }
+}
+
+</script>
+</body>
+</html>
